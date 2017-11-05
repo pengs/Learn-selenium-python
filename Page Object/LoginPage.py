@@ -5,7 +5,7 @@ from Base import *
 from selenium.webdriver.common.by import By
 
 
-class Loginpage()
+class Loginpage():
 
     url='/'
 
