@@ -2,6 +2,7 @@
 
 项目结构介绍：
 
+ Page Object设计模式
   
   * boss/test_case/models
   
@@ -23,6 +24,8 @@
      
   * driver
      --浏览器驱动
+     
+    
   
   
   
