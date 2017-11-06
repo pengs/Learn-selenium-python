@@ -15,10 +15,10 @@ class Page():
     def __init__(self,driver): #初始化参数（驱动，URL地址，超时时长）
         '''初始化数据'''
         self.driver = driver
-        self.base_url = 'https://cctest.uccc.cc:8001/?#/login'
+        self.base_url = 'boss系统地址'
         self.timeout=10
 
-    def _open(self,url):#私有_open方法
+    def _open(self,url):#私有_open方法，保护作用
          url=self.base_url+url
          print ('Test page is %s'%url)
          self.driver.maximize_window()
@@ -33,7 +33,7 @@ class Page():
         return self.driver.current_url == (self.base_url + self.url)
 
 
-    def find_element(self,*loc): #定义一个元素定位的方法
+    def find_element(self,*loc): #定义单个元素定位的方法
         return self.driver.find_element(*loc)
 
     def find_elements(self,*loc): #定位多个元素
