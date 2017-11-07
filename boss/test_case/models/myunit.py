@@ -3,14 +3,18 @@
 '''主要封装用例执行之前需要进行的操作'''
 
 import unittest
-
-from driver.driver import *
-
+from selenium import webdriver
 
 class Mytest(unittest.TestCase): #定义一个测试类
-
+    global Browser
     def setUp(self):  #初始化数据
-        self.driver=browser()
+        if self.Browser == 'Ie':
+           self.driver = webdriver.Ie()
+        elif self.Browser == 'Chrome':
+             self.driver = webdriver.Chrome()
+        elif self.Browser == 'Firefox':
+             self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
 
