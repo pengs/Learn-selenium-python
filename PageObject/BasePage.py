@@ -4,7 +4,9 @@
 
 
 from selenium import webdriver
+
 from time import sleep
+
 
 class Page():
 
@@ -15,7 +17,7 @@ class Page():
     def __init__(self,driver): #初始化参数（驱动，URL地址，超时时长）
         '''初始化数据'''
         self.driver = driver
-        self.base_url = 'boss系统地址'
+        self.base_url = 'https://cctest.uccc.cc:8001/?#/login'
         self.timeout=10
 
     def _open(self,url):#私有_open方法，保护作用

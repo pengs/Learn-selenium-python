@@ -3,9 +3,9 @@
 ''''数据驱动模型-登录和退出公共测试用例'''
 
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
+from myunit import *
 
 class Login(): #定义一个登录类
 
@@ -37,6 +37,7 @@ if __name__=='__main__':
     Login().user_login(driver,"tongyi",123123) #用户和密码
     sleep(2)
     Login().user_logout(driver)  #退出登录
+    # assertEqual[]
     sleep(3)
 #关闭浏览器
     driver.quit()

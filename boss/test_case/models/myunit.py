@@ -7,21 +7,15 @@ from selenium import webdriver
 
 class Mytest(unittest.TestCase): #定义一个测试类
     global Browser
+
     def setUp(self):  #初始化数据
-        if self.Browser == 'Ie':
-           self.driver = webdriver.Ie()
-        elif self.Browser == 'Chrome':
-             self.driver = webdriver.Chrome()
-        elif self.Browser == 'Firefox':
-             self.driver = webdriver.Firefox()
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
+        self.base_url = "https://cctest.uccc.cc:8001/?#/login"
+
 
     def tearDown(self):
         self.driver.quit()
-
-
-
 
 
