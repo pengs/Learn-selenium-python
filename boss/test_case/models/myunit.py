@@ -5,15 +5,13 @@
 import unittest
 from selenium import webdriver
 
-class Mytest(unittest.TestCase): #定义一个测试类
+class Mytest(): #定义一个测试类
     global Browser
 
     def setUp(self):  #初始化数据
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
-        self.base_url = "https://cctest.uccc.cc:8001/?#/login"
-
 
     def tearDown(self):
         self.driver.quit()
