@@ -25,7 +25,7 @@ report_name=report_dir+'/'+now+'result.html'
 
 if __name__ == "__main__":
    #批量执行测试用例
-   discover = unittest.defaultTestLoader.discover(test_dir, pattern="Boss*.py")
+   discover = unittest.defaultTestLoader.discover(test_dir, pattern="test*.py")
    run = HTMLTestRunner_jpg.HTMLTestRunner(title="测试报告",
                                               description="测试用例",
                                               stream=open(report_name, "wb"),
