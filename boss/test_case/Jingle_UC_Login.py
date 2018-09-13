@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from time import sleep
 from myunit import *
 
-class Jingle_Login(): #定义一个登录类
+class Jingle_UC_Login(): #定义一个登录类
 
 
     def user_login(self,driver,account,password): #定义一个用户登录的方法
@@ -34,9 +34,9 @@ if __name__=='__main__':
     driver.get("https://jingleapp.uccc.cc/manage/jingle/#/login")
 
 #调用Login类里面的方法
-    Jingle_Login().user_login(driver,"test",'TongYitest') #用户和密码
+    Jingle_UC_Login().user_login(driver,"test",'TongYitest') #用户和密码
     sleep(2)
-    Jingle_Login().user_logout(driver)  #退出登录
+    Jingle_UC_Login().user_logout(driver)  #退出登录
     # assertEqual[]
     sleep(3)
 #关闭浏览器
